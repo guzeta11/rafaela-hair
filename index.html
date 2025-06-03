@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rafaela Hair - Salão de Beleza</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background: #fdf8f5;
+      color: #333;
+    }
+
+    header {
+      background: #d87093;
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #f9d5e5;
+    }
+
+    section {
+      padding: 60px 40px;
+    }
+
+    .hero {
+      background: url('https://www.unimed.coop.br/portalunimed/cartilhas/cuidados-salao-beleza/images/salao-beleza.jpg') center/cover no-repeat;
+      color: #fff;
+      padding: 100px 40px;
+      text-align: center;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+      font-weight: 500;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .feature {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(216, 112, 147, 0.25);
+      text-align: center;
+    }
+
+    .feature h3 {
+      margin-bottom: 10px;
+      color: #d87093;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li::before {
+      content: '✔️';
+      margin-right: 10px;
+      color: #d87093;
+    }
+
+    form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(216, 112, 147, 0.25);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #d87093;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    form button {
+      background: #d87093;
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+      background: #b05574;
+    }
+
+    footer {
+      background: #d87093;
+      color: #fff;
+      text-align: center;
+      padding: 30px 20px;
+      font-weight: 600;
+    }
+
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: #fff;
+      padding: 15px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+    }
+
+    .whatsapp-button:hover {
+      background: #1ebd5a;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 15px;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h2 {
+        font-size: 28px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Rafaela Hair</h1>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#estrutura">Comodidades</a>
+      <a href="#beneficios">Serviços</a>
+      <a href="#contato">Contato</a>
+      <a href="#agendamento">Agendamento</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Beleza, cuidado e bem-estar</h2>
+    <p>Salão de beleza com acessibilidade, espaço seguro e comodidades pensadas para você. Agende seu horário!</p>
+  </section>
+
+  <section id="sobre">
+    <h2>Sobre Nós</h2>
+    <p>
+      Rafaela Hair é um salão de beleza com avaliação 5,0 estrelas, localizado na R. Pedro Alvares Cabral,
+      1041, Gurupi - TO. Empreendedoras apaixonadas por beleza, oferecendo um ambiente acessível e inclusivo.
+    </p>
+  </section>
+
+  <section id="estrutura">
+    <h2>Comodidades</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>♿ Acessibilidade</h3>
+        <p>Entrada com acessibilidade para pessoas em cadeira de rodas.</p>
+      </div>
+      <div class="feature">
+        <h3>🚻 Banheiros</h3>
+        <p>Banheiro convencional e banheiro de gênero neutro.</p>
+      </div>
+      <div class="feature">
+        <h3>📶 Wi-Fi Gratuito</h3>
+        <p>Conecte-se enquanto cuida da sua beleza.</p>
+      </div>
+      <div class="feature">
+        <h3>🌈 Espaço Seguro</h3>
+        <p>Ambiente acolhedor para pessoas transgênero.</p>
+      </div>
+      <div class="feature">
+        <h3>🕒 Agendamento</h3>
+        <p>Atendimento mediante agendamento prévio. É recomendado marcar hora.</p>
+      </div>
+      <div class="feature">
+        <h3>💳 Pagamentos</h3>
+        <p>Cartão de crédito, débito e pagamentos por NFC via dispositivos móveis.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="beneficios">
+    <h2>Serviços Oferecidos</h2>
+    <ul>
+      <li>Corte e penteados personalizados</li>
+      <li>Coloração e tratamentos capilares</li>
+      <li>Manicure e pedicure</li>
+      <li>Maquiagem profissional</li>
+      <li>Consultoria de beleza e estilo</li>
+    </ul>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <p><strong>Endereço:</strong> R. Pedro Alvares Cabral, 1041, Gurupi - TO, 77405-050</p>
+    <p><strong>Telefone:</strong> (63) 98404-1916</p>
+    <p><strong>Horário de Funcionamento:</strong> Terça a sábado, das 08:00 às 19:00</p>
+    <p><strong>Código Plus:</strong> 7WFQ+V7 Gurupi, Tocantins</p>
+  </section>
+
+  <section id="agendamento">
+    <h2>Agende Seu Horário</h2>
+    <form action="#" method="POST">
+      <input type="text" name="nome" placeholder="Seu nome" required />
+      <input type="email" name="email" placeholder="Seu e-mail" required />
+      <input type="tel" name="telefone" placeholder="Seu telefone" required />
+      <textarea name="servico" rows="4" placeholder="Serviço desejado ou observações"></textarea>
+      <button type="submit">Enviar Agendamento</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Rafaela Hair. Todos os direitos reservados.</p>
+  </footer>
+
+  <a
+    class="whatsapp-button"
+    href="https://wa.me/5563984041916"
+    target="_blank"
+    rel="noopener noreferrer"
+    >💬 Fale no WhatsApp</a
+  >
+</body>
+
+</html>
